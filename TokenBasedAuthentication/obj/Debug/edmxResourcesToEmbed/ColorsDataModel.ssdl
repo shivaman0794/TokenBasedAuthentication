@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ColorsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ColorsDB.dbo.Colors' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="Color" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hex" Type="nvarchar" MaxLength="50" />
+    <Property Name="Employee" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
+  <EntityContainer Name="ColorsDBModelStoreContainer">
+    <EntitySet Name="Colors" EntityType="Self.Colors" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Colors].[Color] AS [Color], 
+    [Colors].[Category] AS [Category], 
+    [Colors].[Type] AS [Type], 
+    [Colors].[Hex] AS [Hex], 
+    [Colors].[Employee] AS [Employee]
+    FROM [dbo].[Colors] AS [Colors]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ColorsDBModelStoreContainer" CdmEntityContainer="ColorsDBEntities">
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="ColorsDBModel.Color">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="Color1" ColumnName="Color" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Hex" ColumnName="Hex" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
